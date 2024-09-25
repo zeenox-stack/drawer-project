@@ -1,0 +1,169 @@
+body { 
+    display: flex; 
+    justify-content: center; 
+    background-color: hsl(210, 46%, 95%); 
+    align-items: center; 
+    margin: 0; 
+    height: 100vh;
+} 
+
+.wrapper { 
+    display: flex; 
+    background-color: white; 
+    border-radius: 20px;    
+    padding-right: 10px;
+} 
+
+.caption { 
+    font-family: Manrope;
+}
+.image { 
+    padding-right: 20px; 
+    width: 300px;
+}
+
+.image > img { 
+    height: 300px; 
+    width: 100%; 
+    border-radius: 20px 0 0 20px; 
+} 
+
+.descripton { 
+    font-size: 13px; 
+    padding: 20px; 
+    font-family: Manrope, sans-serif;
+} 
+
+.profile-info { 
+    display: flex; 
+}  
+
+.relation { 
+    display: flex;
+}
+
+.img > img { 
+    height: 50px; 
+    width: 50px; 
+    border-radius: 50%; 
+    padding: 5px;
+} 
+
+button { 
+    height: 40px; 
+    width: 40px; 
+    border-radius: 50%; 
+    border: none; 
+} 
+
+.tooltip { 
+    visibility: visible;
+}
+ 
+   .share { 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin-left: 120px; 
+    } 
+
+  .icons { 
+    position: absolute; 
+    display: none; 
+    background-color:  hsl(217, 19%, 35%); 
+    padding: 10px; 
+    bottom: 120px; 
+    right: 45px; 
+    border-radius: 10px; 
+    border-right: 10px solid transparent; 
+    right: 235px;
+    transform: translateY(-200px); 
+    
+  } 
+
+  .icons::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    transform: translateY(10px);
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent; /* Triangle pointing upwards */
+  }
+  
+
+  .icons > p { 
+    padding: 10px; 
+    letter-spacing: 5px; 
+    color: white; 
+    font-size: 13px; 
+  } 
+
+  .icons > img { 
+    padding: 5px; 
+    height: 25px; 
+    transform: translateY(10px);
+  } 
+
+  .icons > button { 
+    display: none;  
+  }
+
+@media screen and (max-width: 768px) {
+    .wrapper { 
+        display: block; 
+        padding-right: 0; 
+        font-family: Manrope;
+    } 
+
+    .image { 
+        padding-right: 0; 
+        width: 100%;
+    } 
+
+   .about { 
+    padding: 20px;
+   } 
+
+   .icons::after{ 
+    display: none;
+   }
+
+    .profile-info > .img { 
+        display: contents;
+    } 
+
+    .profile-info > .relation { 
+        display: contents;
+    }
+  
+   
+
+   .icons { 
+    position: static;
+     display: none;
+     border-top-left-radius: 0; 
+     border-top-right-radius: 0; 
+     transform: translateY(10px);
+     padding: 15px 80px;
+     gap: 10px; 
+     bottom: 110px; 
+   } 
+    
+   .icons > p { 
+    color: hsl(212, 23%, 69%); 
+    font-size: 15px; 
+   } 
+
+   .icons > button { 
+    position: absolute;
+    transform: translateX(260px); 
+    top: 20px; 
+    background-color: hsl(212, 23%, 69%); 
+   }
+
+  
+    
+}
